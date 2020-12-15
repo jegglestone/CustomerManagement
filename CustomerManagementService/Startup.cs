@@ -1,5 +1,6 @@
 using System;
 using CustomerManagementService.Data;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,8 +29,12 @@ namespace CustomerManagementService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddMediatR(typeof(Startup));
+
 
             if (!_environment.IsProduction())
             {

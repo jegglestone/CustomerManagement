@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using CustomerManagementService.Features.Customers.Models;
 using CustomerManagementService.Model;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -25,5 +26,16 @@ namespace CustomerManagementService.Controllers
         }
 
 
+        [HttpGet("[action]")]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(List<Customer>))]
+        public async Task<IActionResult> All([FromQuery] CustomersQuery query)
+        {
+            var model = await _mediator.Send(query);
+
+            return new ObjectResult(model)
+            {
+                StatusCode = (int)HttpStatusCode.OK
+            };
+        }
     }
 }
