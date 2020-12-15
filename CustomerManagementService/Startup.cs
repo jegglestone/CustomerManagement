@@ -1,4 +1,3 @@
-using System;
 using CustomerManagementService.Data;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
