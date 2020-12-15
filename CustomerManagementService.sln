@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementService",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementService.Data", "CustomerManagementService.Data\CustomerManagementService.Data.csproj", "{34F067BE-6723-4A6D-80B2-BA89A3821A82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementService.Model", "CustomerManagementService.Model\CustomerManagementService.Model.csproj", "{A59B0DF3-0203-4A5C-87D5-BDCAFA386DE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{34F067BE-6723-4A6D-80B2-BA89A3821A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34F067BE-6723-4A6D-80B2-BA89A3821A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34F067BE-6723-4A6D-80B2-BA89A3821A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A59B0DF3-0203-4A5C-87D5-BDCAFA386DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59B0DF3-0203-4A5C-87D5-BDCAFA386DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59B0DF3-0203-4A5C-87D5-BDCAFA386DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59B0DF3-0203-4A5C-87D5-BDCAFA386DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
