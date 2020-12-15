@@ -20,6 +20,7 @@ namespace CustomerManagementService
             _environment = environment;
         }
 
+
         public IConfiguration Configuration { get; }
 
    

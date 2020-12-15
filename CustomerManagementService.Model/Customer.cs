@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CustomerManagementService.Model
 {
@@ -18,6 +19,6 @@ namespace CustomerManagementService.Model
 
         public bool IsActive { get; set; }
 
-        public Guid AddressId { get; set; }
+        public List<Address> Addresses { get; set; }
     }
 }
