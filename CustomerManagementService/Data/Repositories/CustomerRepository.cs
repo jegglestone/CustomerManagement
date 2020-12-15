@@ -1,27 +1,21 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using CustomerManagementService.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace CustomerManagementService.Data.Repositories
 {
-    public class CustomerRepository : ICustomerRepository
+    public class CustomerRepository : RepositoryBase<Customer>, ICustomerRepository
     {
-        private readonly AppDbContext _context;
-
-        public CustomerRepository(AppDbContext appDbContext)
+        public CustomerRepository(AppDbContext appDbContext) : base(appDbContext)
         {
-            _context = appDbContext;
         }
 
-        public List<Customer> GetCustomers()
+        public async Task<List<Customer>> GetCustomers()
         {
-            List<Customer> customerEntities = _context.Customers
+            return await FindAll()
                 .Include(x => x.Addresses)
-                .AsNoTracking()
-                .ToList();
-            
-            return customerEntities;
+                .ToListAsync();
         }
     }
 }

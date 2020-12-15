@@ -18,9 +18,11 @@ namespace CustomerManagementService.Features.Customers.Handlers
             _repository = repository;
         }
 
-        public Task<List<Customer>> Handle(CustomersQuery request, CancellationToken cancellationToken)
+        public async Task<List<Customer>> Handle(CustomersQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var customers = await _repository.GetCustomers();
+
+            return customers;
         }
     }
 }
