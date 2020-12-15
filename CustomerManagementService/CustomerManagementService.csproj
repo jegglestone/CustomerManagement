@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.1">
       <PrivateAssets>all</PrivateAssets>
@@ -17,6 +18,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CustomerManagementService.Model\CustomerManagementService.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Features\Customers\Models\" />
+    <Folder Include="Features\Customers\Handlers\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Dtos\" />
   </ItemGroup>
 
 
