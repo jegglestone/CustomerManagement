@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nrAR8dG4EIVBrApg0M2jXvMIufwxVxAuSOX6DKpecz5qJJAIwPgcOhVFPMEcLj2znl50j3Wq+9eCz3SMlmO5EQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\da2je\\Source\\Repos\\CustomerManagementService\\CustomerManagementService.Data\\CustomerManagementService.Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\da2je\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
