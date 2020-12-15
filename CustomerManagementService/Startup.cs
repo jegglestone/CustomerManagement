@@ -1,4 +1,5 @@
 using CustomerManagementService.Data;
+using CustomerManagementService.Data.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,11 +20,9 @@ namespace CustomerManagementService
             Configuration = configuration;
             _environment = environment;
         }
-
-
+        
         public IConfiguration Configuration { get; }
 
-   
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -34,6 +33,7 @@ namespace CustomerManagementService
             
             services.AddMediatR(typeof(Startup));
 
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             if (!_environment.IsProduction())
             {

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using CustomerManagementService.Model;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +16,13 @@ namespace CustomerManagementService.Data.Repositories
         public async Task<List<Customer>> GetCustomers()
         {
             return await FindAll()
+                .Include(x => x.Addresses)
+                .ToListAsync();
+        }
+
+        public async Task<List<Customer>> GetCustomers(Expression<Func<Customer, bool>> expression)
+        {
+            return await FindByCondition(expression)
                 .Include(x => x.Addresses)
                 .ToListAsync();
         }

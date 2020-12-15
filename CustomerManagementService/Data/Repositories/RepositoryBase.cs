@@ -20,10 +20,16 @@ namespace CustomerManagementService.Data.Repositories
                 .Set<T>()
                 .AsNoTracking();
         }
+
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression)
+        {
+            return RepositoryContext.Set<T>().Where(expression).AsNoTracking();
+        }
     }
 
     public interface IRepositoryBase<T>
     {
         IQueryable<T> FindAll();
+        IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression);
     }
 }
