@@ -35,5 +35,15 @@ namespace CustomerManagementService.Features.Customers
                 StatusCode = (int)HttpStatusCode.OK
             };
         }
+
+
+        [HttpPost]
+        [ProducesResponseType((int)HttpStatusCode.Created, Type = typeof(Customer))]
+        public async Task<IActionResult> Create([FromBody] CustomerCreateCommand command)
+        {
+            var model = await _mediator.Send(command);
+
+            return CreatedAtAction(nameof(Create), new { model.Id }, model);
+        }
     }
 }
