@@ -7,7 +7,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace CustomerManagementService.Controllers
+namespace CustomerManagementService.Features.Customers
 {
     [ApiController]
     [Route("[controller]")]
