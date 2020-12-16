@@ -26,5 +26,10 @@ namespace CustomerManagementService.Data.Repositories
                 .Include(x => x.Addresses)
                 .ToListAsync();
         }
+
+        public async Task<Customer> AddCustomerAsync(Customer customer)
+        {
+            return await Create(customer);
+        }
     }
 }

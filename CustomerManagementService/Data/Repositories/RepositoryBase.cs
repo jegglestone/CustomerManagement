@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace CustomerManagementService.Data.Repositories
@@ -25,11 +26,33 @@ namespace CustomerManagementService.Data.Repositories
         {
             return RepositoryContext.Set<T>().Where(expression).AsNoTracking();
         }
+
+        public async Task<T> Create(T entity)
+        {
+            await RepositoryContext.Set<T>().AddAsync(entity);
+
+            await RepositoryContext.SaveChangesAsync();
+
+            return entity;
+        }
+
+        public void Update(T entity)
+        {
+            RepositoryContext.Set<T>().Update(entity);
+        }
+
+        public void Delete(T entity)
+        {
+            RepositoryContext.Set<T>().Remove(entity);
+        }
     }
 
     public interface IRepositoryBase<T>
     {
         IQueryable<T> FindAll();
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression);
+        Task<T> Create(T entity);
+        void Update(T entity);
+        void Delete(T entity);
     }
 }
