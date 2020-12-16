@@ -23,7 +23,6 @@ namespace CustomerManagementService.Features.Customers
             _mediator = mediator;
         }
 
-
         [HttpGet("[action]")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(List<Customer>))]
         public async Task<IActionResult> All([FromQuery] CustomersQuery query)
@@ -35,7 +34,6 @@ namespace CustomerManagementService.Features.Customers
                 StatusCode = (int)HttpStatusCode.OK
             };
         }
-
 
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.Created, Type = typeof(Customer))]
