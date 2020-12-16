@@ -21,8 +21,8 @@ namespace CustomerManagementService.Features.Customers.Handlers
         public async Task<List<Customer>> Handle(CustomersQuery request, CancellationToken cancellationToken)
         {
             var customers = request.IsActive == null
-                ? await _repository.GetCustomers()
-                : await _repository.GetCustomers(c => c.IsActive == (bool) request.IsActive);
+                ? await _repository.GetCustomersAsync()
+                : await _repository.GetCustomersAsync(c => c.IsActive == (bool) request.IsActive);
 
             return customers;
         }

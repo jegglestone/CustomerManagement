@@ -8,8 +8,8 @@ namespace CustomerManagementService.Data.Repositories
 {
     public interface ICustomerRepository
     {
-        Task<List<Customer>> GetCustomers();
+        Task<List<Customer>> GetCustomersAsync();
 
-        Task<List<Customer>> GetCustomers(Expression<Func<Customer, bool>> expression);
+        Task<List<Customer>> GetCustomersAsync(Expression<Func<Customer, bool>> expression);
     }
 }
