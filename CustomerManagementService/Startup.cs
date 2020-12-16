@@ -1,5 +1,7 @@
+using AutoMapper;
 using CustomerManagementService.Data;
 using CustomerManagementService.Data.Repositories;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,12 +28,18 @@ namespace CustomerManagementService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(cfg =>
+            {
+                cfg.RegisterValidatorsFromAssemblyContaining<Startup>();//assembly:Api
+                cfg.RunDefaultMvcValidationAfterFluentValidationExecutes = true;
+            });
 
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
             services.AddMediatR(typeof(Startup));
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
 
