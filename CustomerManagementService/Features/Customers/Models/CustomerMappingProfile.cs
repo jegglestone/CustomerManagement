@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using CustomerManagementService.Model;
-
-namespace CustomerManagementService.Features.Customers.Models
+﻿namespace CustomerManagementService.Features.Customers.Models
 {
     public class CustomerMappingProfile : Profile
     {

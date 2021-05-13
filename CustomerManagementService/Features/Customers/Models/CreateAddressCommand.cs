@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CustomerManagementService.Features.Customers.Models
+﻿namespace CustomerManagementService.Features.Customers.Models
 {
     public class CreateAddressCommand
     {

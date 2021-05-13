@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using CustomerManagementService.Model;
-using MediatR;
-
-namespace CustomerManagementService.Features.Customers.Models
+﻿namespace CustomerManagementService.Features.Customers.Models
 {
     public class CustomerCreateCommand : IRequest<Customer>
     {
