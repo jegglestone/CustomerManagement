@@ -1,8 +1,4 @@
-using System;
 using CustomerManagementService.Data;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace CustomerManagementService
 {

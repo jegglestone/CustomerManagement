@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-using CustomerManagementService.Model;
-using Microsoft.EntityFrameworkCore;
-
-namespace CustomerManagementService.Data.Repositories
+﻿namespace CustomerManagementService.Data.Repositories
 {
     public class CustomerRepository : RepositoryBase<Customer>, ICustomerRepository
     {
