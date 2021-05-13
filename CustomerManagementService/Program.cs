@@ -22,7 +22,7 @@ namespace CustomerManagementService
                 }
                 catch (Exception ex)
                 {
-                    // log
+                    throw;
                 }
             }
 

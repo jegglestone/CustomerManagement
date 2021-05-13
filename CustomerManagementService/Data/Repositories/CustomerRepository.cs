@@ -1,6 +1,7 @@
-﻿using CustomerManagementService.Model;
 
 namespace CustomerManagementService.Data.Repositories
+
+
 {
     public class CustomerRepository : RepositoryBase<Customer>, ICustomerRepository
     {
