@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using CustomerManagementService.Data.Repositories;
+﻿using CustomerManagementService.Data.Repositories;
 using CustomerManagementService.Features.Customers.Models;
-using FluentValidation;
-using System.Linq;
 
 namespace CustomerManagementService.Features.Customers.Validators
 {

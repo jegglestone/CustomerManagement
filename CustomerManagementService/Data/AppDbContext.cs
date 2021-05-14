@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using CustomerManagementService.Model;
-
-namespace CustomerManagementService.Data
+﻿namespace CustomerManagementService.Data
 {
     public class AppDbContext : DbContext
     {

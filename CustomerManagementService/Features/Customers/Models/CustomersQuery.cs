@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using CustomerManagementService.Model;
 
 namespace CustomerManagementService.Features.Customers.Models

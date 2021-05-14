@@ -1,10 +1,5 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using AutoMapper;
-using CustomerManagementService.Data.Repositories;
+﻿using CustomerManagementService.Data.Repositories;
 using CustomerManagementService.Features.Customers.Models;
-using CustomerManagementService.Model;
-using MediatR;
 
 namespace CustomerManagementService.Features.Customers.Handlers
 {
