@@ -5,5 +5,5 @@ To publsh the database locally, modify the appsettings.json "DefaultConnection" 
 
 Swagger can be run from /swagger/index.html
 
-Allows creation of customer and associated addresses
+Only allows creation of customer and associated addresses
 Max/minimum of one main address
